@@ -59,8 +59,9 @@ function loadHeader() {
             <nav class="navbar">
                 <div class="nav-container">
                     <div class="logo" onclick="window.location.href='#home'">
-                        <div class="logo-circle">DS</div>
-                        <div class="logo-text">
+                        <div class="logo-circle"><img src="images/profile/dev-profile.png" alt="Profile" class="profile-img"></div>
+                        
+                        <div>
                             <h1>Dev Sevaiwar</h1>
                             <p>Mutual Fund Advisor | NJ Wealth</p>
                         </div>
@@ -113,7 +114,7 @@ function loadFooter() {
                     <div>
                         <h3 style="color: white; margin-bottom: 16px;">Connect With Me</h3>
                         <div class="social-links">
-                            <a href="https://wa.me/919302163501" target="_blank" aria-label="WhatsApp">
+                            <a href="https://wa.me/919028303435" target="_blank" aria-label="WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                             <a href="https://www.instagram.com/dev_sevaiwar/?hl=en" target="_blank" aria-label="Instagram">
@@ -127,7 +128,7 @@ function loadFooter() {
                             </a>
                         </div>
                         <p style="margin-top: 16px;">
-                            <i class="fas fa-phone-alt"></i> +91 9302163501<br>
+                            <i class="fas fa-phone-alt"></i> +91 9028303435<br>
                             <i class="far fa-envelope"></i> devsevaiwar@gmail.com
                         </p>
                     </div>
@@ -156,42 +157,42 @@ function loadMutualFunds() {
             name: "SBI Bluechip Fund",
             description: "Large Cap Fund",
             return: "14.2%",
-            logo: "assets/images/logos/sbi-logo.png",
+            logo: "images/logos/sbi-logo.png",
             fallbackLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/SBI_logo.svg/1200px-SBI_logo.svg.png"
         },
         {
             name: "Nippon India Small Cap",
             description: "Small Cap Fund",
             return: "22.8%",
-            logo: "assets/images/logos/nippon-logo.png",
+            logo: "images/logos/nippon-logo.png",
             fallbackLogo: "https://companieslogo.com/img/orig/NIPPON.NS_BIG-9c2b9d10.png"
         },
         {
             name: "HDFC Balanced Advantage",
             description: "Dynamic Asset Allocation",
             return: "11.5%",
-            logo: "assets/images/logos/hdfc-logo.png",
+            logo: "images/logos/hdfc-logo.png",
             fallbackLogo: "https://logoeps.com/wp-content/uploads/2014/02/HDFC-bank-logo-vector-01.png"
         },
         {
             name: "ICICI Pru Value Discovery",
             description: "Value Fund",
             return: "18.3%",
-            logo: "assets/images/logos/icici-logo.png",
+            logo: "images/logos/icici-logo.png",
             fallbackLogo: "https://logoeps.com/wp-content/uploads/2011/07/icici-bank-logo-vector.png"
         },
         {
             name: "Kotak Emerging Equity",
             description: "Mid Cap Fund",
             return: "16.7%",
-            logo: "https://logoeps.com/wp-content/uploads/2013/05/kotak-mahindra-bank-logo-vector.png",
+            logo: "images/logos/kotak-logo.png",
             fallbackLogo: "https://logoeps.com/wp-content/uploads/2013/05/kotak-mahindra-bank-logo-vector.png"
         },
         {
             name: "Axis Growth Opportunities",
             description: "Large & Mid Cap",
             return: "13.9%",
-            logo: "https://logoeps.com/wp-content/uploads/2012/06/axis-bank-logo-vector.png",
+            logo: "images/logos/axis-logo.png",
             fallbackLogo: "https://logoeps.com/wp-content/uploads/2012/06/axis-bank-logo-vector.png"
         }
     ];
@@ -446,7 +447,7 @@ function initServiceCards() {
         card.addEventListener('click', () => {
             const serviceName = card.querySelector('h3')?.innerText || 'Financial Service';
             const message = `Hello Dev, I'm interested in learning more about ${encodeURIComponent(serviceName)}. Please guide me.`;
-            window.open(`https://wa.me/919302163501?text=${message}`, '_blank');
+            window.open(`https://wa.me/919028303435?text=${message}`, '_blank');
         });
     });
 }

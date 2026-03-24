@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const whatsappBtn = document.getElementById('whatsappContactBtn');
     if (whatsappBtn) {
         whatsappBtn.addEventListener('click', function() {
-            window.open('https://wa.me/919302163501?text=Hello%20Dev%2C%20I%20want%20to%20start%20investing%20and%20need%20expert%20guidance.', '_blank');
+            window.open('https://wa.me/919028303435?text=Hello%20Dev%2C%20I%20want%20to%20start%20investing%20and%20need%20expert%20guidance.', '_blank');
             
             // Show success feedback
             showToast('Redirecting to WhatsApp...');
@@ -161,7 +161,7 @@ function clearError(inputId) {
    Send WhatsApp Message
    ============================================ */
 function sendWhatsAppMessage(name, phone, email, interest, message) {
-    const phoneNumber = "919302163501";
+    const phoneNumber = "919028303435";
     
     let whatsappMessage = `*NEW ENQUIRY FROM PORTFOLIO*%0A`;
     whatsappMessage += `%0A`;
