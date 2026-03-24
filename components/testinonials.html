@@ -1,0 +1,76 @@
+<!-- Testimonials Component - Reusable Testimonials Section -->
+<div class="testimonials-container">
+    <div class="swiper testimonials-swiper">
+        <div class="swiper-wrapper" id="testimonialsDynamicWrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+<script>
+    // Dynamic testimonials data
+    const testimonialsList = [
+        {
+            name: "Rajesh Kumar",
+            initials: "RK",
+            rating: 5,
+            text: "Dev helped me plan my retirement portfolio. His expertise in mutual funds is outstanding. My investments have grown 25% in just 2 years! Highly recommended."
+        },
+        {
+            name: "Priya Sharma",
+            initials: "PS",
+            rating: 5,
+            text: "Started with just ₹500 SIP. Dev guided me patiently and now I have a diversified portfolio. He explains everything in simple terms. Best advisor!"
+        },
+        {
+            name: "Amit Mehta",
+            initials: "AM",
+            rating: 5,
+            text: "Professional, transparent, and always available. Dev's advice on health insurance saved my family during a medical emergency. Grateful for his support."
+        },
+        {
+            name: "Sunita Nair",
+            initials: "SN",
+            rating: 5,
+            text: "Best financial advisor I've ever met. He takes time to understand your goals and suggests the best options. My portfolio shows consistent growth."
+        },
+        {
+            name: "Vikram Singh",
+            initials: "VS",
+            rating: 5,
+            text: "Excellent service and timely advice. Dev is always available to answer queries and provides regular portfolio updates. Very satisfied!"
+        },
+        {
+            name: "Neha Gupta",
+            initials: "NG",
+            rating: 5,
+            text: "Very knowledgeable and patient advisor. Helped me understand mutual funds and start my investment journey. Highly trustworthy and professional."
+        }
+    ];
+    
+    function loadTestimonialsComponent() {
+        const wrapper = document.getElementById('testimonialsDynamicWrapper');
+        if (!wrapper) return;
+        
+        const stars = '★'.repeat(5);
+        
+        wrapper.innerHTML = testimonialsList.map(testimonial => `
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">${testimonial.initials}</div>
+                    <h3>${testimonial.name}</h3>
+                    <p style="color: #FF9900; margin: 8px 0;">${stars}</p>
+                    <p>"${testimonial.text}"</p>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    // Load testimonials when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadTestimonialsComponent);
+    } else {
+        loadTestimonialsComponent();
+    }
+</script>

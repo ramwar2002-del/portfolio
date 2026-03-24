@@ -1,0 +1,69 @@
+<!-- Header Component - Reusable Navigation -->
+<nav class="navbar" id="mainNav">
+    <div class="nav-container">
+        <div class="logo" onclick="window.location.href='#home'">
+            <div class="logo-circle">
+                <span>DS</span>
+            </div>
+            <div class="logo-text">
+                <h1>Dev Sevaiwar</h1>
+                <p>Mutual Fund Advisor | NJ Wealth</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#funds" class="nav-link">Funds</a>
+            <a href="#testimonials" class="nav-link">Reviews</a>
+            <a href="#contact" class="nav-cta">Start Investing</a>
+        </div>
+        <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .mobile-menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--dark);
+    }
+    
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block;
+        }
+        
+        .nav-links {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+        
+        .nav-links a {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+</style>
+
+<script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        });
+    }
+</script>
